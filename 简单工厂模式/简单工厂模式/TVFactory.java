@@ -1,4 +1,4 @@
-package �򵥹���ģʽ;
+package 简单工厂模式;
 
 public class TVFactory{
 	public static TV produceTV(String brand) {
