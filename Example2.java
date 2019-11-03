@@ -3,19 +3,18 @@ public class Example2 {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-MyThread1 myThread=new MyThread1();
-Thread thread=new Thread(myThread);
-thread.start();
-for(int i=0;i<100;i++) {
-	System.out.println("main");
+MyThread mythread=new MyThread();
+mythread.start();
+while(true) {
+	System.out.println("main类中的方法在运行");
 }
 	}
 
 }
-class MyThread1 implements Runnable{
+class MyThread extends Thread{
 	public void run() {
-		for(int j=0;j<50;j++) {
-			System.out.println("new");
+		while(true) {
+			System.out.println("MyThread类中的方法在运行");
 		}
 	}
 }
